@@ -126,3 +126,7 @@
 
 季節によって変動しない。
 通常期の指定席特急券より530円を引いた金額で年間固定。
+
+
+#### 参考URL
+[JR料金表](https://www.jr-odekake.net/guide/img/shinkansen_ryoukin.pdf)
