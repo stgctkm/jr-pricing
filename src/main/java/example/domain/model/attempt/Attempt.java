@@ -75,7 +75,7 @@ public class Attempt {
         FareAmount 合計料金 =
                 大人片道料金().人数分の料金(new NumberOfPeople(adult))
                         .add(子供料金().人数分の料金(new NumberOfPeople(child)))
-                        .multiply(new SmallGroupDiscount(合計人数(), departureDate).割引料金())
+                        .少人数団体割引の適用(new SmallGroupDiscount(合計人数(), departureDate))
                         .subtract(new LargeGroupDiscount(大人片道料金(), 合計人数()).割引料金());
         return 合計料金;
     }

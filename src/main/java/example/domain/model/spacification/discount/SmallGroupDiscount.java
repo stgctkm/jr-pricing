@@ -20,8 +20,8 @@ public class SmallGroupDiscount {
     }
 
     public DiscountRate 割引料金() {
-        if (人数._8人未満() && !人数._30人以下()) {
-            return new DiscountRate(new BigDecimal("100"));
+        if (人数._8人未満() || !人数._30人以下()) {
+            return new DiscountRate(BigDecimal.ONE);
         }
 
         return 出発日.割引率();

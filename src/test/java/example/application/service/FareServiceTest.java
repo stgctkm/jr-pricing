@@ -67,4 +67,10 @@ class FareServiceTest {
         Attempt attempt = new Attempt(60, 0, new DepartureDate("2019-10-01"), Destination.新大阪, SeatType.指定席, TrainType.のぞみ, TripType.片道);
         assertEquals((8910 + 5490 + 320) * 58, attempt.合計料金().intValue());
     }
+
+    @Test
+    void 新大阪までののぞみの大人9人料金() {
+        Attempt attempt = new Attempt(9, 0, new DepartureDate("2019-10-01"), Destination.新大阪, SeatType.指定席, TrainType.のぞみ, TripType.片道);
+        assertEquals(112600/* (8910 + 5490 + 320) * 9 * 0.85 の10円未満切り捨て */, attempt.合計料金().intValue());
+    }
 }

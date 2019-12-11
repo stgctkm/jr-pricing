@@ -1,6 +1,7 @@
 package example.domain.model.spacification;
 
 import example.domain.model.spacification.discount.DiscountRate;
+import example.domain.model.spacification.discount.SmallGroupDiscount;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -45,5 +46,11 @@ public class FareAmount {
 
     public FareAmount subtract(FareAmount other) {
         return new FareAmount(value.subtract(other.value));
+    }
+
+    public FareAmount 少人数団体割引の適用(SmallGroupDiscount 団体割引) {
+        return this.multiply(団体割引.割引料金())
+                .十円未満の端数切り捨て();
+
     }
 }
