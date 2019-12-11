@@ -5,9 +5,12 @@ import example.domain.model.bill.Amount;
 import example.domain.model.rules.DistanceTable;
 import example.domain.model.rules.FareTable;
 import example.domain.model.rules.SurchargeTable;
-import example.domain.model.spacification.Destination;
+import example.domain.model.spacification.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
+import java.time.LocalDate;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class FareServiceTest {
@@ -34,5 +37,12 @@ class FareServiceTest {
         Destination destination = Destination.新大阪;
         Amount expected = new Amount(fareTable.fare(destination) + surchargeTable.surcharge(destination));
         assertEquals(expected, result);
+    }
+
+    @Test
+    void 新大阪までののぞみの一人料金() {
+        Attempt attempt = new Attempt(1, 0, new DepartureDate("2019-10-01"), Destination.新大阪, SeatType.指定席, TrainType.のぞみ, TripType.片道);
+        assertEquals(8910 + 5490 + 320, attempt.料金());
+
     }
 }
