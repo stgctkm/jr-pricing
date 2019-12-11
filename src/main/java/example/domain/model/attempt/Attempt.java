@@ -2,6 +2,8 @@ package example.domain.model.attempt;
 
 import example.domain.model.spacification.*;
 import example.domain.model.spacification.child.ChildFare;
+import example.domain.model.spacification.discount.LargeGroupDiscount;
+import example.domain.model.spacification.discount.SmallGroupDiscount;
 import example.domain.model.spacification.fare.BasicFare;
 import example.domain.model.spacification.surcharge.SuperExpressSurcharge;
 import example.domain.model.spacification.trip.TripType;
@@ -73,7 +75,8 @@ public class Attempt {
         FareAmount 合計料金 =
                 大人片道料金().人数分の料金(new NumberOfPeople(adult))
                         .add(子供料金().人数分の料金(new NumberOfPeople(child)))
-                        .subtract(大人片道料金().人数分の料金(合計人数().団体割引人数()));
+                        .multiply(new SmallGroupDiscount(合計人数(), departureDate).割引料金())
+                        .subtract(new LargeGroupDiscount(大人片道料金(), 合計人数()).割引料金());
         return 合計料金;
     }
 }

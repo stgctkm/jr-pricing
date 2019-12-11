@@ -12,7 +12,7 @@ public class RoundTripDiscount {
 
     Destination 目的地;
 
-    RoundTripDiscountRate 割引率 = new RoundTripDiscountRate(BigDecimal.valueOf(0.9));
+    DiscountRate 割引率 = new DiscountRate(new BigDecimal("0.9"));
 
     public RoundTripDiscount(Destination 目的地) {
         this.目的地 = 目的地;

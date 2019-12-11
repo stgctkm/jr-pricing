@@ -13,13 +13,13 @@ public enum SeasonType {
     繁忙期(200),
     ;
 
-    FareAmount 加算料金;
+    FareAmount 指定席加算料金;
 
-    SeasonType(int 加算料金) {
-        this.加算料金 = new FareAmount(BigDecimal.valueOf(加算料金));
+    SeasonType(int 指定席加算料金) {
+        this.指定席加算料金 = new FareAmount(BigDecimal.valueOf(指定席加算料金));
     }
 
     public FareAmount 加算料金() {
-        return 加算料金;
+        return 指定席加算料金;
     }
 }

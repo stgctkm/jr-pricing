@@ -1,5 +1,8 @@
 package example.domain.model.spacification;
 
+/**
+ * 片道距離
+ */
 public class OneWayDistance {
 
     int value;

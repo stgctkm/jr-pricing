@@ -2,6 +2,9 @@ package example.domain.model.spacification;
 
 import java.math.BigDecimal;
 
+/**
+ * 人数
+ */
 public class NumberOfPeople {
     int value;
 
@@ -11,6 +14,10 @@ public class NumberOfPeople {
 
     public BigDecimal decimalValue() {
         return BigDecimal.valueOf(value);
+    }
+
+    public boolean _8人未満() {
+        return value < 8;
     }
 
     public boolean _30人以下() {

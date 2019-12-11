@@ -1,10 +1,13 @@
 package example.domain.model.spacification;
 
-import example.domain.model.spacification.discount.RoundTripDiscountRate;
+import example.domain.model.spacification.discount.DiscountRate;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
+/**
+ * 料金
+ */
 public class FareAmount {
     BigDecimal value;
 
@@ -16,7 +19,7 @@ public class FareAmount {
         return value.intValue();
     }
 
-    public FareAmount multiply(RoundTripDiscountRate rate) {
+    public FareAmount multiply(DiscountRate rate) {
         return new FareAmount(value.multiply(rate.value()));
     }
 

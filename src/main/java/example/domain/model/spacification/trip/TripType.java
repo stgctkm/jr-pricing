@@ -6,18 +6,18 @@ import example.domain.model.spacification.FareAmount;
  * 片道/往復
  */
 public enum TripType {
-    片道(new OneWayTripFareAmount()),
-    往復(new RoundTripFareAmount()),
+    片道(new OneWayTicketFareAmount()),
+    往復(new RoundTicketFareAmount()),
     ;
 
-    TripTypeFareAmount tripTypeFareAmount;
+    TicketTypeFareAmount ticketTypeFareAmount;
 
-    TripType(TripTypeFareAmount tripTypeFareAmount) {
-        this.tripTypeFareAmount = tripTypeFareAmount;
+    TripType(TicketTypeFareAmount ticketTypeFareAmount) {
+        this.ticketTypeFareAmount = ticketTypeFareAmount;
     }
 
     public FareAmount 料金(FareAmount 片道料金) {
-        return tripTypeFareAmount.料金(片道料金);
+        return ticketTypeFareAmount.料金(片道料金);
     }
 
     public boolean is片道() {
