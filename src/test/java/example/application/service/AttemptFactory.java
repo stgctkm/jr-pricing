@@ -2,6 +2,7 @@ package example.application.service;
 
 import example.domain.model.attempt.Attempt;
 import example.domain.model.spacification.*;
+import example.domain.model.spacification.trip.TripType;
 
 class AttemptFactory {
 

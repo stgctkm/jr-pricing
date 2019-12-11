@@ -1,8 +1,10 @@
 package example.domain.model.attempt;
 
 import example.domain.model.spacification.*;
+import example.domain.model.spacification.child.ChildFare;
 import example.domain.model.spacification.fare.BasicFare;
 import example.domain.model.spacification.surcharge.SuperExpressSurcharge;
+import example.domain.model.spacification.trip.TripType;
 
 /**
  * 購入希望
@@ -44,10 +46,21 @@ public class Attempt {
                 ;
     }
 
-    public int 料金() {
-        int 基本料金 = new BasicFare(destination).基本料金();
-        int 特急料金 = new SuperExpressSurcharge(destination, trainType).料金();
+    public FareAmount 料金() {
+        FareAmount 片道料金 = 片道料金();
+        return tripType.料金(片道料金);
+    }
 
-        return 基本料金 + 特急料金;
+    private FareAmount 片道料金() {
+        FareAmount 片道基本料金 = new BasicFare(destination).基本料金(tripType);
+        FareAmount 片道特急料金 = new SuperExpressSurcharge(destination, trainType).料金();
+
+        return 片道基本料金.add(片道特急料金);
+    }
+
+    public FareAmount 子供料金() {
+        FareAmount 基本料金 = new BasicFare(destination).基本料金(tripType);
+        FareAmount 特急料金 = new SuperExpressSurcharge(destination, trainType).料金();
+        return new ChildFare(基本料金, 特急料金).料金();
     }
 }
