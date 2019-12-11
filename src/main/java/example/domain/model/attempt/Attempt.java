@@ -47,11 +47,11 @@ public class Attempt {
     }
 
     public FareAmount 料金() {
-        FareAmount 片道料金 = 片道料金();
+        FareAmount 片道料金 = 大人片道料金();
         return tripType.料金(片道料金);
     }
 
-    private FareAmount 片道料金() {
+    private FareAmount 大人片道料金() {
         FareAmount 片道基本料金 = new BasicFare(destination).基本料金(tripType);
         FareAmount 片道特急料金 = new SuperExpressSurcharge(destination, trainType).料金();
 
@@ -62,5 +62,10 @@ public class Attempt {
         FareAmount 基本料金 = new BasicFare(destination).基本料金(tripType);
         FareAmount 特急料金 = new SuperExpressSurcharge(destination, trainType).料金();
         return new ChildFare(基本料金, 特急料金).料金();
+    }
+
+    public FareAmount 合計料金() {
+        return 大人片道料金().人数分の料金(new NumberOfPeople(adult))
+                .add(子供料金().人数分の料金(new NumberOfPeople(child)));
     }
 }
