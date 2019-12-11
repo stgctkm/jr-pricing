@@ -2,6 +2,7 @@ package example.domain.model.attempt;
 
 import example.domain.model.spacification.*;
 import example.domain.model.spacification.child.ChildFare;
+import example.domain.model.spacification.discount.GroupDiscount;
 import example.domain.model.spacification.fare.BasicFare;
 import example.domain.model.spacification.surcharge.SuperExpressSurcharge;
 import example.domain.model.spacification.trip.TripType;
@@ -36,7 +37,7 @@ public class Attempt {
 
     @Override
     public String toString() {
-        return  "大人=" + adult + "人" +
+        return "大人=" + adult + "人" +
                 "\n子供=" + child + "人" +
                 "\n出発日=" + departureDate +
                 "\n目的地=" + destination +
@@ -64,8 +65,16 @@ public class Attempt {
         return new ChildFare(基本料金, 特急料金).料金();
     }
 
+    public NumberOfPeople 合計人数() {
+        return new NumberOfPeople(adult + child);
+    }
+
+    // TODO 大人４人・子供４人の場合の団体割引は大人に対して適用される？
     public FareAmount 合計料金() {
-        return 大人片道料金().人数分の料金(new NumberOfPeople(adult))
-                .add(子供料金().人数分の料金(new NumberOfPeople(child)));
+        FareAmount 合計料金 =
+                大人片道料金().人数分の料金(new NumberOfPeople(adult))
+                        .add(子供料金().人数分の料金(new NumberOfPeople(child)))
+                        .subtract(大人片道料金().人数分の料金(合計人数().団体割引人数()));
+        return 合計料金;
     }
 }

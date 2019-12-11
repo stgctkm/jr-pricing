@@ -39,4 +39,8 @@ public class FareAmount {
     public FareAmount 人数分の料金(NumberOfPeople 人数) {
         return new FareAmount(value.multiply(人数.decimalValue()));
     }
+
+    public FareAmount subtract(FareAmount other) {
+        return new FareAmount(value.subtract(other.value));
+    }
 }
