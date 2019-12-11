@@ -130,3 +130,5 @@
 
 #### 参考URL
 [JR料金表](https://www.jr-odekake.net/guide/img/shinkansen_ryoukin.pdf)
+
+[団体割引](https://www.jreast.co.jp/kippu/0702.html)
