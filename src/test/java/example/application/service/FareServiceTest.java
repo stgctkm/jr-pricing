@@ -48,9 +48,9 @@ class FareServiceTest {
     }
 
     @Test
-    void 姫路までののぞみの子供一人片道料金() {
-        Attempt attempt = new Attempt(0, 1, new DepartureDate("2019-10-01"), Destination.姫路, SeatType.指定席, TrainType.のぞみ, TripType.片道);
-        assertEquals((10010 + 5920 + 530) / 2, attempt.子供料金().intValue());
+    void 新大阪までののぞみの子供一人片道料金() {
+        Attempt attempt = new Attempt(0, 1, new DepartureDate("2019-10-01"), Destination.新大阪, SeatType.指定席, TrainType.のぞみ, TripType.片道);
+        assertEquals((8910 + 5490 + 320) / 2, attempt.子供料金().intValue());
     }
 
     @Test
