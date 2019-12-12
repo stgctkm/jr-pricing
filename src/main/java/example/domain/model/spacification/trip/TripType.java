@@ -1,6 +1,6 @@
 package example.domain.model.spacification.trip;
 
-import example.domain.model.spacification.FareAmount;
+import example.domain.model.spacification.amount.FareAmount;
 
 /**
  * 片道/往復

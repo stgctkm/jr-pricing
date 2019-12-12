@@ -1,6 +1,6 @@
-package example.domain.model.spacification.surcharge;
+package example.domain.model.spacification.season;
 
-import example.domain.model.spacification.FareAmount;
+import example.domain.model.spacification.amount.FareAmount;
 
 import java.math.BigDecimal;
 

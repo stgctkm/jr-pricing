@@ -1,7 +1,7 @@
 package example.domain.model.spacification.fare;
 
-import example.domain.model.spacification.Destination;
-import example.domain.model.spacification.FareAmount;
+import example.domain.model.spacification.destination.Destination;
+import example.domain.model.spacification.amount.FareAmount;
 import example.domain.model.spacification.discount.RoundTripDiscount;
 import example.domain.model.spacification.trip.TripType;
 

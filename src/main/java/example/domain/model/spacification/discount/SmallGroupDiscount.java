@@ -1,7 +1,6 @@
 package example.domain.model.spacification.discount;
 
-import example.domain.model.spacification.DepartureDate;
-import example.domain.model.spacification.FareAmount;
+import example.domain.model.spacification.schedule.DepartureDate;
 import example.domain.model.spacification.NumberOfPeople;
 
 import java.math.BigDecimal;

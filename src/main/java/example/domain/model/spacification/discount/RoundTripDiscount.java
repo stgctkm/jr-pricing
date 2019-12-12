@@ -1,7 +1,7 @@
 package example.domain.model.spacification.discount;
 
-import example.domain.model.spacification.Destination;
-import example.domain.model.spacification.FareAmount;
+import example.domain.model.spacification.destination.Destination;
+import example.domain.model.spacification.amount.FareAmount;
 
 import java.math.BigDecimal;
 

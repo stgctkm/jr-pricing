@@ -1,6 +1,6 @@
 package example.domain.model.rules;
 
-import example.domain.model.spacification.Destination;
+import example.domain.model.spacification.destination.Destination;
 import org.springframework.stereotype.Component;
 
 import java.util.EnumMap;

@@ -1,7 +1,7 @@
-package example.domain.model.spacification;
+package example.domain.model.spacification.schedule;
 
 import example.domain.model.spacification.discount.DiscountRate;
-import example.domain.model.spacification.surcharge.SeasonType;
+import example.domain.model.spacification.season.SeasonType;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

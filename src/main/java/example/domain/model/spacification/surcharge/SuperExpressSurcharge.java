@@ -1,6 +1,10 @@
 package example.domain.model.spacification.surcharge;
 
-import example.domain.model.spacification.*;
+import example.domain.model.spacification.amount.FareAmount;
+import example.domain.model.spacification.destination.Destination;
+import example.domain.model.spacification.schedule.DepartureDate;
+import example.domain.model.spacification.seat.SeatType;
+import example.domain.model.spacification.train.TrainType;
 
 /**
  * 特急料金

@@ -1,11 +1,16 @@
 package example.domain.model.attempt;
 
 import example.domain.model.spacification.*;
+import example.domain.model.spacification.amount.FareAmount;
 import example.domain.model.spacification.child.ChildFare;
+import example.domain.model.spacification.destination.Destination;
 import example.domain.model.spacification.discount.LargeGroupDiscount;
 import example.domain.model.spacification.discount.SmallGroupDiscount;
 import example.domain.model.spacification.fare.BasicFare;
+import example.domain.model.spacification.schedule.DepartureDate;
+import example.domain.model.spacification.seat.SeatType;
 import example.domain.model.spacification.surcharge.SuperExpressSurcharge;
+import example.domain.model.spacification.train.TrainType;
 import example.domain.model.spacification.trip.TripType;
 
 /**

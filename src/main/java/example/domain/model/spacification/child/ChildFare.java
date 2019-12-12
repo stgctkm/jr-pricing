@@ -1,9 +1,6 @@
 package example.domain.model.spacification.child;
 
-import example.domain.model.spacification.FareAmount;
-
-import java.math.BigDecimal;
-import java.math.RoundingMode;
+import example.domain.model.spacification.amount.FareAmount;
 
 /**
  * 子供料金

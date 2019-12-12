@@ -1,6 +1,6 @@
 package example.domain.model.spacification.discount;
 
-import example.domain.model.spacification.FareAmount;
+import example.domain.model.spacification.amount.FareAmount;
 import example.domain.model.spacification.NumberOfPeople;
 
 import java.math.BigDecimal;

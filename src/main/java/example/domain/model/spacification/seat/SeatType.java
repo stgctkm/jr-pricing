@@ -1,4 +1,6 @@
-package example.domain.model.spacification;
+package example.domain.model.spacification.seat;
+
+import example.domain.model.spacification.amount.FareAmount;
 
 import java.math.BigDecimal;
 
