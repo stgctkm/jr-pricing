@@ -1,7 +1,8 @@
-package example.domain.model.spacification.discount;
+package example.domain.model.spacification.discount.roundtrip;
 
 import example.domain.model.spacification.destination.Destination;
 import example.domain.model.spacification.amount.FareAmount;
+import example.domain.model.spacification.discount.group.DiscountRate;
 
 import java.math.BigDecimal;
 

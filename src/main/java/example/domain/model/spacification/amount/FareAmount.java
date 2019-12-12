@@ -1,8 +1,6 @@
 package example.domain.model.spacification.amount;
 
 import example.domain.model.spacification.NumberOfPeople;
-import example.domain.model.spacification.discount.LargeGroupDiscount;
-import example.domain.model.spacification.discount.SmallGroupDiscount;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

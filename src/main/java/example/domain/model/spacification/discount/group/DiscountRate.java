@@ -1,4 +1,4 @@
-package example.domain.model.spacification.discount;
+package example.domain.model.spacification.discount.group;
 
 import example.domain.model.spacification.amount.Rate;
 

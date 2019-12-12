@@ -1,4 +1,4 @@
-package example.domain.model.spacification.seat;
+package example.domain.model.spacification.surcharge.seat;
 
 import example.domain.model.spacification.amount.FareAmount;
 
