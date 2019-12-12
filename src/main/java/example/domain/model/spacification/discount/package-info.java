@@ -1,4 +1,4 @@
 /**
- * 割引料金
+ * 団体割引
  */
 package example.domain.model.spacification.discount;
