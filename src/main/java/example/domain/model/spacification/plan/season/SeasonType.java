@@ -1,4 +1,4 @@
-package example.domain.model.spacification.season;
+package example.domain.model.spacification.plan.season;
 
 import example.domain.model.spacification.amount.FareAmount;
 

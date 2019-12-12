@@ -1,8 +1,8 @@
 package example.application.service;
 
 import example.domain.model.attempt.Attempt;
-import example.domain.model.spacification.destination.Destination;
-import example.domain.model.spacification.schedule.DepartureDate;
+import example.domain.model.spacification.plan.destination.Destination;
+import example.domain.model.spacification.plan.schedule.DepartureDate;
 import example.domain.model.spacification.surcharge.seat.SeatType;
 import example.domain.model.spacification.surcharge.train.TrainType;
 import example.domain.model.spacification.trip.TripType;

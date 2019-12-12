@@ -1,7 +1,7 @@
 package example.domain.model.spacification.surcharge.train;
 
 import example.domain.model.spacification.amount.FareAmount;
-import example.domain.model.spacification.destination.Destination;
+import example.domain.model.spacification.plan.destination.Destination;
 
 import java.math.BigDecimal;
 

@@ -1,4 +1,4 @@
-package example.domain.model.spacification.destination;
+package example.domain.model.spacification.plan.destination;
 
 /**
  * 片道距離

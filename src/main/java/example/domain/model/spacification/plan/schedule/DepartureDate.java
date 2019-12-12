@@ -1,6 +1,6 @@
-package example.domain.model.spacification.schedule;
+package example.domain.model.spacification.plan.schedule;
 
-import example.domain.model.spacification.season.SeasonType;
+import example.domain.model.spacification.plan.season.SeasonType;
 
 import java.time.LocalDate;
 import java.time.MonthDay;
