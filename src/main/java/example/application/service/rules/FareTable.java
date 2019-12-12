@@ -1,4 +1,4 @@
-package example.domain.model.rules;
+package example.application.service.rules;
 
 import example.domain.model.spacification.plan.destination.Destination;
 import org.springframework.stereotype.Component;
@@ -7,19 +7,19 @@ import java.util.EnumMap;
 import java.util.Map;
 
 /**
- * ひかり　指定席特急券テーブル
+ * 運賃テーブル
  */
 @Component
-public class SurchargeTable {
+public class FareTable {
 
     Map<Destination, Integer> map =new EnumMap<Destination, Integer>(Destination .class);
 
     {
-        map.put(Destination.新大阪, 5490);
-        map.put(Destination.姫路, 5920);
+        map.put(Destination.新大阪, 8910);
+        map.put(Destination.姫路, 10010);
     }
 
-    public int surcharge(Destination destination) {
+    public int fare(Destination destination) {
         return map.get(destination);
     }
 }

@@ -1,4 +1,4 @@
-package example.domain.model.rules;
+package example.application.service.rules;
 
 import example.domain.model.spacification.plan.destination.Destination;
 import org.springframework.stereotype.Component;
@@ -7,19 +7,19 @@ import java.util.EnumMap;
 import java.util.Map;
 
 /**
- * 運賃テーブル
+ * 営業キロテーブル
  */
 @Component
-public class FareTable {
+public class DistanceTable {
 
     Map<Destination, Integer> map =new EnumMap<Destination, Integer>(Destination .class);
 
     {
-        map.put(Destination.新大阪, 8910);
-        map.put(Destination.姫路, 10010);
+        map.put(Destination.新大阪, 553);
+        map.put(Destination.姫路, 644);
     }
 
-    public int fare(Destination destination) {
+    public int distance(Destination destination) {
         return map.get(destination);
     }
 }

@@ -2,9 +2,9 @@ package example.application.service;
 
 import example.domain.model.attempt.Attempt;
 import example.domain.model.bill.Amount;
-import example.domain.model.rules.DistanceTable;
-import example.domain.model.rules.FareTable;
-import example.domain.model.rules.SurchargeTable;
+import example.application.service.rules.DistanceTable;
+import example.application.service.rules.FareTable;
+import example.application.service.rules.SurchargeTable;
 import example.domain.model.spacification.plan.destination.Destination;
 import example.domain.model.spacification.plan.schedule.DepartureDate;
 import example.domain.model.spacification.surcharge.seat.SeatType;
