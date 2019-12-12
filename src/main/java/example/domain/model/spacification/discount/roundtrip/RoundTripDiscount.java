@@ -1,8 +1,7 @@
 package example.domain.model.spacification.discount.roundtrip;
 
-import example.domain.model.spacification.plan.destination.Destination;
 import example.domain.model.spacification.amount.FareAmount;
-import example.domain.model.spacification.discount.group.DiscountRate;
+import example.domain.model.spacification.plan.destination.Destination;
 
 import java.math.BigDecimal;
 
@@ -13,7 +12,7 @@ public class RoundTripDiscount {
 
     Destination 目的地;
 
-    DiscountRate 割引率 = new DiscountRate(new BigDecimal("0.9"));
+    RoundTripDiscountRate 割引率 = new RoundTripDiscountRate(new BigDecimal("0.9"));
 
     public RoundTripDiscount(Destination 目的地) {
         this.目的地 = 目的地;

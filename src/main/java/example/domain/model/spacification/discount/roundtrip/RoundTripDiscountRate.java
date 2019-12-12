@@ -1,16 +1,16 @@
-package example.domain.model.spacification.discount.group;
+package example.domain.model.spacification.discount.roundtrip;
 
 import example.domain.model.spacification.amount.Rate;
 
 import java.math.BigDecimal;
 
 /**
- * 団体割引率
+ * 往復割引率
  */
-public class DiscountRate implements Rate {
+public class RoundTripDiscountRate implements Rate {
     BigDecimal value;
 
-    public DiscountRate(BigDecimal value) {
+    public RoundTripDiscountRate(BigDecimal value) {
         this.value = value;
     }
 

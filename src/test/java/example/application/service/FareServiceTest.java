@@ -9,7 +9,7 @@ import example.domain.model.spacification.plan.destination.Destination;
 import example.domain.model.spacification.plan.schedule.DepartureDate;
 import example.domain.model.spacification.surcharge.seat.SeatType;
 import example.domain.model.spacification.surcharge.train.TrainType;
-import example.domain.model.spacification.trip.TripType;
+import example.domain.model.spacification.plan.trip.TripType;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
