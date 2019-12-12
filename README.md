@@ -3,6 +3,8 @@
 - bootRunで実行、 localhost:8080 で Swagger-ui 画面に遷移
 - jigReports で build/jig 以下に、クラス図等を出力
   - jig の出力には GraphVizが必要です
+  
+- [JIGと一緒に開発してみよう](https://github.com/dddjava/Jig/wiki/Tutorial#jig%E3%81%A8%E4%B8%80%E7%B7%92%E3%81%AB%E9%96%8B%E7%99%BA%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86)
 
 # JR 新幹線　料金ルールを実装してみよう
 
@@ -132,3 +134,5 @@
 [JR料金表](https://www.jr-odekake.net/guide/img/shinkansen_ryoukin.pdf)
 
 [団体割引](https://www.jreast.co.jp/kippu/0702.html)
+
+
