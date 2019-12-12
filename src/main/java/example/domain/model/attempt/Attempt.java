@@ -6,6 +6,7 @@ import example.domain.model.spacification.child.ChildFare;
 import example.domain.model.spacification.destination.Destination;
 import example.domain.model.spacification.discount.group.LargeGroupDiscount;
 import example.domain.model.spacification.discount.group.SmallGroupDiscount;
+import example.domain.model.spacification.discount.roundtrip.RoundTripDiscount;
 import example.domain.model.spacification.fare.BasicFare;
 import example.domain.model.spacification.schedule.DepartureDate;
 import example.domain.model.spacification.surcharge.seat.SeatType;
@@ -59,16 +60,18 @@ public class Attempt {
     }
 
     private FareAmount 大人片道料金() {
-        FareAmount 片道基本料金 = new BasicFare(destination).基本料金(tripType);
+        FareAmount 片道基本料金 = new BasicFare(destination).基本料金();
+        FareAmount 往復割引適用後の片道基本料金 = new RoundTripDiscount(destination).適用後の基本料金(片道基本料金);
         FareAmount 片道特急料金 = new SuperExpressSurcharge(destination, trainType, departureDate, seatType).料金();
 
-        return 片道基本料金.add(片道特急料金);
+        return 往復割引適用後の片道基本料金.add(片道特急料金);
     }
 
     public FareAmount 子供料金() {
-        FareAmount 基本料金 = new BasicFare(destination).基本料金(tripType);
+        FareAmount 基本料金 = new BasicFare(destination).基本料金();
+        FareAmount 往復割引適用後の片道基本料金 = new RoundTripDiscount(destination).適用後の基本料金(基本料金);
         FareAmount 特急料金 = new SuperExpressSurcharge(destination, trainType, departureDate, seatType).料金();
-        return new ChildFare(基本料金, 特急料金).料金();
+        return new ChildFare(往復割引適用後の片道基本料金, 特急料金).料金();
     }
 
     public NumberOfPeople 合計人数() {
