@@ -1,5 +1,6 @@
 package example.domain.model.spacification.discount;
 
+import example.domain.model.spacification.amount.FareAmount;
 import example.domain.model.spacification.schedule.DepartureDate;
 import example.domain.model.spacification.NumberOfPeople;
 
@@ -18,7 +19,7 @@ public class SmallGroupDiscount {
         this.出発日 = departureDate;
     }
 
-    public DiscountRate 割引料金() {
+    DiscountRate 割引料金() {
         if (人数._8人未満() || !人数._30人以下()) {
             return new DiscountRate(BigDecimal.ONE);
         }
@@ -27,9 +28,9 @@ public class SmallGroupDiscount {
 
     }
 
+    public FareAmount 適用する(FareAmount 合計料金) {
+        return 合計料金.multiply(割引料金())
+                .十円未満の端数切り捨て();
+    }
 
-//    public FareAmount 適用後の基本料金(FareAmount 合計料金) {
-//        if (人数._30人以下()) return 合計料金;
-//        人数.割引対象人数()
-//    }
 }
