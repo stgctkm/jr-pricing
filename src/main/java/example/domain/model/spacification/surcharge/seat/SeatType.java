@@ -25,7 +25,4 @@ public enum SeatType {
         return this == 自由席;
     }
 
-//    public FareAmount 加算料金(SeasonType 季節区分) {
-//        季節区分.加算料金()
-//    }
 }

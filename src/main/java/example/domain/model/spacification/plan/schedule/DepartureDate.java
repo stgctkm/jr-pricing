@@ -26,13 +26,6 @@ public class DepartureDate {
         return SeasonType.通常期;
     }
 
-//    public DiscountRate 割引率() {
-//        if (value.isAfter(MonthDay.of(12, 21))
-//                && value.isBefore(MonthDay.of(1, 10)))
-//            return new DiscountRate(new BigDecimal("0.9"));
-//        return new DiscountRate(new BigDecimal("0.85"));
-//    }
-
     public boolean isAfter(MonthDay 日付) {
         return value.isAfter(日付);
     }
