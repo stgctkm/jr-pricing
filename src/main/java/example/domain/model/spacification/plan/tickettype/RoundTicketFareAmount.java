@@ -1,4 +1,4 @@
-package example.domain.model.spacification.plan.trip;
+package example.domain.model.spacification.plan.tickettype;
 
 import example.domain.model.spacification.amount.FareAmount;
 

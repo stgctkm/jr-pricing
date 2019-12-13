@@ -1,18 +1,18 @@
-package example.domain.model.spacification.plan.trip;
+package example.domain.model.spacification.plan.tickettype;
 
 import example.domain.model.spacification.amount.FareAmount;
 
 /**
  * 片道/往復
  */
-public enum TripType {
+public enum TicketType {
     片道(new OneWayTicketFareAmount()),
     往復(new RoundTicketFareAmount()),
     ;
 
     TicketTypeFareAmount ticketTypeFareAmount;
 
-    TripType(TicketTypeFareAmount ticketTypeFareAmount) {
+    TicketType(TicketTypeFareAmount ticketTypeFareAmount) {
         this.ticketTypeFareAmount = ticketTypeFareAmount;
     }
 

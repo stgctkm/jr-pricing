@@ -12,7 +12,7 @@ import example.domain.model.spacification.plan.schedule.DepartureDate;
 import example.domain.model.spacification.surcharge.seat.SeatType;
 import example.domain.model.spacification.surcharge.SuperExpressSurcharge;
 import example.domain.model.spacification.surcharge.train.TrainType;
-import example.domain.model.spacification.plan.trip.TripType;
+import example.domain.model.spacification.plan.tickettype.TicketType;
 
 /**
  * 購入希望
@@ -26,16 +26,16 @@ public class Attempt {
 
     SeatType seatType;
     TrainType trainType;
-    TripType tripType;
+    TicketType ticketType;
 
-    public Attempt(int adult, int child, DepartureDate departureDate, Destination destination, SeatType seatType, TrainType trainType, TripType tripType) {
+    public Attempt(int adult, int child, DepartureDate departureDate, Destination destination, SeatType seatType, TrainType trainType, TicketType ticketType) {
         this.adult = adult;
         this.child = child;
         this.departureDate = departureDate;
         this.destination = destination;
         this.seatType = seatType;
         this.trainType = trainType;
-        this.tripType = tripType;
+        this.ticketType = ticketType;
     }
 
     public Destination to() {
@@ -50,7 +50,7 @@ public class Attempt {
                 "\n目的地=" + destination +
                 "\n座席区分=" + seatType +
                 "\n列車種類=" + trainType +
-                "\n片道/往復=" + tripType
+                "\n片道/往復=" + ticketType
                 ;
     }
 

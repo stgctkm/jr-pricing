@@ -5,7 +5,7 @@ import example.domain.model.spacification.plan.destination.Destination;
 import example.domain.model.spacification.plan.schedule.DepartureDate;
 import example.domain.model.spacification.surcharge.seat.SeatType;
 import example.domain.model.spacification.surcharge.train.TrainType;
-import example.domain.model.spacification.plan.trip.TripType;
+import example.domain.model.spacification.plan.tickettype.TicketType;
 
 class AttemptFactory {
 
@@ -16,7 +16,7 @@ class AttemptFactory {
                 Destination.新大阪,
                 SeatType.指定席,
                 TrainType.ひかり,
-                TripType.片道
+                TicketType.片道
         );
     }
 }

@@ -1,4 +1,4 @@
-package example.presentatoin;
+package example.presentation;
 
 import example.application.service.FareService;
 import example.domain.model.attempt.Attempt;
@@ -8,7 +8,7 @@ import example.domain.model.spacification.plan.destination.Destination;
 import example.domain.model.spacification.plan.schedule.DepartureDate;
 import example.domain.model.spacification.surcharge.seat.SeatType;
 import example.domain.model.spacification.surcharge.train.TrainType;
-import example.domain.model.spacification.plan.trip.TripType;
+import example.domain.model.spacification.plan.tickettype.TicketType;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -37,10 +37,10 @@ public class Pricing {
             @ApiParam(value="目的地", defaultValue = "新大阪") @RequestParam Destination destination,
             @ApiParam(value="座席区分", defaultValue = "指定席") @RequestParam SeatType seatType,
             @ApiParam(value="列車種類", defaultValue = "ひかり") @RequestParam TrainType trainType,
-            @ApiParam(value="片道/往復", defaultValue = "片道") @RequestParam TripType tripType
+            @ApiParam(value="片道/往復", defaultValue = "片道") @RequestParam TicketType ticketType
             ) {
 
-        Attempt attempt = new Attempt(adult, child, departureDate, destination, seatType, trainType, tripType);
+        Attempt attempt = new Attempt(adult, child, departureDate, destination, seatType, trainType, ticketType);
         Amount amount = fareService.amountFor(attempt);
         return new Bill(attempt, amount).toString();
     }
