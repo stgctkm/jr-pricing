@@ -56,7 +56,7 @@ public class Attempt {
 
     public FareAmount 料金() {
         FareAmount 片道料金 = 大人片道料金();
-        return tripType.料金(片道料金);
+        return ticketType.料金(片道料金);
     }
 
     private FareAmount 大人片道料金() {
